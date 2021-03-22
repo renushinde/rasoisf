@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Renu's Rasoi</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Renu's Rasoi</div>
+        <div class="toggle"></div>
+        <div class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="catering.html">Catering</a></li>
+                <li><a href="catering.html">Contact</a></li>
+            </ul>
+            <div class="social">
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABWElEQVRoQ+2X7VECQQyGHzqwA7QDOwArsATtQO0AKwA7oAQ6ADvQCtQOKMF5Z07HgV0g+3HuafIH5gh3eT+SzY0YeIwGXj8O4LcVdAX+gwKXwA0wBfT9Z2yBF+Ch+zTzUdNCZ8AcuD2hqitgc0LeXkotACp+HWA8VmNzABbAnYHRpgCcA2+G4pXaFID7zvsWDE0BWAHXkeqfgVlqw4buWaOJNU0mEQAXwLtFmmO5fQJ4NUylY3V//94nANlHh1nRcAABOmM94AqUnkJazLTr7Iaua5XYja/FLVSHzoGkyOkBNaT2nRKRXEfyH7uJUgJA1nhtAUBWc7cA4AnQ/pQULQB47Paj3gFobQ69benaOFDNB7AMXNfyp9fKpMhRIPZAP8gsUrgCvgtZ/BLIdQu5hdxCmQy4hTIJ9CnkFnILZTLwFy1UnpIDd6wxhRyAhQFXwMJWjdzBK/AJH/tNMQjWTkQAAAAASUVORK5CYII="/>
+                    </a>
+                    </li>
+                    <li><a href="https://yelp.com">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC40lEQVRoQ+2Z/VFVMRDFDxWoFSAVqBWoFSgVCBUgFagViBUoFWgHagVCBUAH2gHzc25mMtdNdpObC+85b2f4g7lJdk/262zenrZc9rbcfu0A3LcHdx74XzzwVNJzSS8kPZbE/z8kHUr6vSbIJSH0UNKJpKPJaMvOlxOQ1TD0Angt6bMkQNTkVNLZatZL3WWU8CBkPPkg6b23aMn3Xg8Q698DijcWALZ/kfTGAfFJ0tsA0O4lvR5AIfF/LelBRfvPqTJ1G+htXAKAs6lAJHNJNh4AhtcSeisA0LguCqFEE3vkhcGS70tDKOmmVL4rGOLpoBzfTPnUjMU7vOVAvPDE2FDTkYDjqWNJ31oUsnYkgFJvKOmYrwcE1IOLCMtIACiFNsCPcnlmGEUJvjKoCMazPiyjAWAYRuxnFliEji6OByxp6t6jAWAQRO9rZtncA7WEZxuhdBCl4a0AKJncLvW9JimULqfZIK1lTvgViA8SGqriSguAPG6hECg4r5Q/jGVdGmjYj/FcgicMQqGK1AKgRBtQBGmjI9dkHlrztXiVMzgvXIlaAHixy20TOnjFGiPnHTsZjNEe+OLFtACwSqR1MEBIQksIozQve2EU+t4CIDqFoRj+s+own9C1AIgMMH+mEXLVOTh3TQuAUg5gNImX/mqup3lB+khSciWcrKVDWwDk3AX2iMF4pcUI6ENeRskXzukG0wKASyABEc9oOjFlk7yBSiQpMVa+d4FpBRCpDIyY9IwkOZWIvmaE35NGA7Ca3ZzMETKvnJsIv2aMBFDqtHMAtRHU8loV6ygA5AYU2XpqtHTwVvSxYFn49tk/AkBpOPF6jZXQsFfyJNwERwCAYabqZF1qScecWtNPEoONFIu/a5YCiFSVmo58bqAAeOX5H2BLAXCgV1U8HVzCnbBRjyJANawndw9AOFxa4rP3UEokoZB+asI7G/s63Qty6L5V3TvU0sJhOwB3ccs1HTsP3LcHbgG/5YcxDpyOLQAAAABJRU5ErkJggg=="/></a></li>
+                    <li><a href="https://twitter.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACmklEQVRoQ+2YjU0cQQyF31UAqQCoAFIBUAGhgpAKSAcJFSRUAFRAOgA6IBUAFQQ6iL5oVtpw82PPzN7ppLW04o7b8bz37LG9u9CG22LD8WsmsO4IzhGYI9CowJxCTgG3JX2W9EnSgSS+30t6lnQTPsdcct9r7IdcBHaDYyfG5O1nkn4E0KmbIHM6AgsGCPM/CC9ZjsAvSX8kfenA4EoSBCz2GCJxNAJ9nIpOigAhAzx23UgC4BCotUtJX1OLUwRgfzdaVEsCIZ4KaZMjdhFwcGY+xKJoJcAmhJZ04q/VWtUf9vktCVGXDrKHAM5w8FMSyliMc3RiuTFzD+CJAJVqyVIEOP2EPmU4+x5KXw4fVeWwgUBS+cFnrgpZNocIKlPDY6ll8ZHjl6w+FgKE7dahHmQADBGut5BuLRFoIgB2qg+NZF1WTQD1t0JqrJPEXmkasFQh0iHaxlcQluKwaenEK8AZ3YIKVBSutQpNSS47Qliq0PtxYkqwMd9MoJTorJVyjK57XnIywe+UYOaoopUI4GAdJGiMpvHbQgASpBOjQ0tTKqo5uuGjdWi0EAD8AJzPXFPag2cPC4HSYNebjFl9NrYQWOU5MJXOsWJWAqyZeqR4CY0r+vYhFWYPAXxwkL/1zpkwuXK2PE97/2B4CbCGM8FDNhvudyLDoyoRdlsNgWETiPC2obUqVYOvjQAdku5MFEzdMiNrE3gvAXoBzwl0yFbgHFh8uXP+vRixFBoaFyCHcbY1Tcb7UiopBq5q461C5DeHqufoQIcl7ZpV9/SBoeIQ7h13iZBIFUZiBsLoe50Kn/8t8VQh0omLdIIYxneenTEUxlB4/IaiFWN2vYfApEBqnc8EapXrtW6OQC8la/3MEahVrte6jY/AX/JKbzF+bdhCAAAAAElFTkSuQmCC"/>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
