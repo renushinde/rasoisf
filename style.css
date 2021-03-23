@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-
+:root{
+    --primary-color:crimson;
+}
 *{
     margin: 0;
     padding: 0;
@@ -8,18 +10,21 @@
 html, body{
     font-family: 'Poppins', sans-serif;
     color: crimson;
-}
+} 
+
 h1 {
     font-size: 30px;
     font-weight: 500;
     text-transform: uppercase;
    
 }
+
 p {
     margin: 20px 0 10px 0;
     font-size: 1.1rem;
     text-transform: uppercase;
 }
+
 header {
    
     background-repeat: no-repeat;
@@ -27,17 +32,19 @@ header {
 }
 
  section {
+    display: flex;
     height: 100vh;
     align-items: center;
     padding: 100px;
 } 
+
 .logo {
     position: absolute;
     top: 30px;
     left: 100px;
     font-size: 2rem;
     font-weight: 700;
-    z-index: 10;
+    z-index: 20;
 }
 .btn {
     display: inline-block;
@@ -48,9 +55,10 @@ header {
     padding: 10px 30px;
 
 }
-.btn:hover{
+.btn:hover {
     transform:scale(0.98) ;
 }
+
 .home-content { 
     color: white;
     font-weight: bold;
@@ -65,17 +73,100 @@ header {
 }
 
 .home-img {
-    background-position: center;
+     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     bottom: 0;
     right:0;
-    height: 100%;
+    height: 110%;
     
 } 
 
 .home-img:hover{
     filter: blur(8px);
     -webkit-filter: blur(8px);
+}
+
+.toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color) url(https://raw.githubusercontent.com/bradtraversy/creative-agency-website/master/images/menu.png);
+    z-index: 20;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: var(--primary-color) url(https://raw.githubusercontent.com/bradtraversy/creative-agency-website/master/images/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: seashell;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navigation.active{
+    left: 0;
+}
+
+.navigation ul {
+    position: relative;
+}
+
+.navigation ul li {
+    list-style: none;
+    text-align: center;
+    position: relative;
+
+}
+
+.navigation ul li a {
+    font-size: 2.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;   
+}
+
+.navigation ul li a:hover {
+    color: var(--primary-color);
+}
+
+.navigation .social-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.navigation .social-bar {
+    display: inline-block;
+    transform: scale(0.5);
+}
+.navigation .email-icon {
+    position:absolute;
+    bottom: 20px;
+    transform: scale(0.5);
 }
