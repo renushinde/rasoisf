@@ -35,13 +35,6 @@ header {
     background-position: center;
 }
 
- section {
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    padding: 100px;
-} 
-
 .logo {
     position: absolute;
     top: 30px;
@@ -76,119 +69,11 @@ header {
     text-align: center;
 }
 
-.home-img {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    bottom: 0;
-    right:0;
-    height: 110%;
-    
-} 
-
-.home-img:hover{
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-}
-
-.toggle {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 60px;
-    height: 60px;
-    background: var(--primary-color) url(https://raw.githubusercontent.com/bradtraversy/creative-agency-website/master/images/menu.png);
-    z-index: 20;
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-}
-
-.toggle.active {
-    background: var(--primary-color) url(https://raw.githubusercontent.com/bradtraversy/creative-agency-website/master/images/close.png);
-    background-size: 25px;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-}
-
-.navigation {
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    background-color: seashell;
-    z-index: 15;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.navigation.active{
-    left: 0;
-}
-
-.navigation ul {
-    position: relative;
-}
-
-.navigation ul li {
-    list-style: none;
-    text-align: center;
-    position: relative;
-
-}
-
-.navigation ul li a {
-    font-size: 2.2rem;
-    color: black;
-    text-decoration: none;
-    font-weight: 300;   
-}
-
-.navigation ul li a:hover {
-    color: var(--primary-color);
-}
-
-.navigation .social-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:70px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.navigation .social-bar a {
-    display: inline-block;
-    transform: scale(0.5);
-}
-.navigation .social-bar a:hover {
-    color: var(--primary-color);
-
-}
-
-.navigation .email-icon {
-    position:absolute;
-    bottom: 20px;
-    width: 60px;
-    transform: scale(0.5);
-}
-
 @media(max-width:1068px) {
     .logo {
         top:10px;
         left: 40px;
         font-size: 1.5rem;
-    }
-    .navigation ul li a {
-        font-size: 2rem;
     }
 }
   
@@ -201,44 +86,128 @@ header {
     background-size: cover;
     position: relative;
   }
-  
-  /* Position the navbar container inside the image */
-  .container {
-    position: absolute;
-    margin: 20px;
-    width: auto;
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
   }
   
-  /* The navbar */
-  .topnav {
-    overflow: hidden;
+  .header li a {
+    background: black;
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    color: #f4f4f4;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
     position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: var(--primary-color);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: var(--primary-color);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
     
   }
   
-  /* Navbar links */
-  .topnav a {
-    float: left;
-    color: var(--primary-color);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  .header .menu-icon .navicon:before {
+    top: 5px;
   }
   
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+  .header .menu-icon .navicon:after {
+    top: -5px;
   }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+    .header li {
+      float: right;
 
-  .topnav-centered a {
-    float: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
   }
-
-  .topnav-right {
-    float: right;
-  }
+  
