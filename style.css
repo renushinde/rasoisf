@@ -189,3 +189,38 @@ header {
 }
 
 
+.bg-img {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQTL5iKHRk4cFVcrFye0kMBqlt2vf-34rInQ&usqp=CAU");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Position the navbar container inside the image */
+  .container {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+  }
+  
+  /* The navbar */
+  .topnav {
+    overflow: hidden;
+  }
+  
+  /* Navbar links */
+  .topnav a {
+
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
