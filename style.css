@@ -218,3 +218,14 @@ p {
     }
   }
   
+                                  /*   ABOUT SECTION */
+ #about {
+   height: auto;
+   display: grid;
+   
+ }
+ h3 {
+   text-align: center;
+   margin-top: 25px;
+   color: black;
+ }
