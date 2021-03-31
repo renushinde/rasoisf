@@ -22,7 +22,8 @@ h1 {
    
 }
 
-.home-content-p  {
+p.home-content-p  {
+  text-align: center;
     margin: 20px 0 10px 0;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -82,6 +83,9 @@ h1 {
         font-size: 1rem;
         
     }
+    .info {
+      grid-template-columns: repeat(1,1fr);
+     }
     
 }
   
@@ -217,6 +221,12 @@ h1 {
     .header .menu-icon {
       display: none;
     }
+    .info {
+      
+      grid-template-columns: repeat(1,1fr);
+      
+      
+     }
   }
   
                                   /*   ABOUT SECTION */
@@ -224,10 +234,14 @@ h1 {
  .info {
   padding-left: 17px;
   padding-right: 17px;
+  margin: 40px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+  text-align: center;
   
  }
+
  h3 {
    text-align: center;
    margin:1.5em auto .3em;
@@ -239,8 +253,9 @@ h1 {
 
  
   p {
+    
     justify-content: center;
-    text-align: center;
+    text-align: left;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -252,6 +267,11 @@ h1 {
     color: rgba(0,0,0,.5);
 
  }
- element.style {
-  white-space: pre-wrap;
-}
+ p.about-text {
+  text-align: center;
+ }
+
+
+ h3.about-title{
+   text-align: left;
+ }
