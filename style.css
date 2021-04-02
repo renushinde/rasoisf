@@ -371,8 +371,25 @@ img {
 footer {
   background-color: black;
   min-height: 200px;
+  padding: 100px;
   
 }
- .hours {
-   float: right;
- }
+.gotop {
+  text-align: center;
+  
+}
+.gotop a {
+  text-decoration: none;
+  color: crimson;
+}
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row .col50 {
+  position: relative;
+  width: 48%;
+}
