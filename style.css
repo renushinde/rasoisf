@@ -335,6 +335,7 @@ img {
   width: 782.843px;
   height: 522px;
 }
+
 .active, .dot:hover {
   background-color: #717171;
 }
@@ -356,3 +357,22 @@ img {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+.image-square {
+  width: 100%;
+  height: auto;
+  padding-top: 17px;
+  position: relative;
+}
+.menu-img {
+  padding-left: 30%;
+}
+
+footer {
+  background-color: black;
+  min-height: 200px;
+  
+}
+ .hours {
+   float: right;
+ }
