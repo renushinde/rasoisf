@@ -23,7 +23,7 @@ h1 {
 }
 
 p.home-content-p  {
-  text-align: center;
+    text-align: center;
     margin: 20px 0 10px 0;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -83,9 +83,14 @@ p.home-content-p  {
         font-size: 1rem;
         
     }
-    .info {
-      grid-template-columns: repeat(1,1fr);
-     }
+    .about section {
+      background-color: crimson;
+    }
+    .row {
+      background-color: crimson;
+      padding: 20px;
+      flex-direction: column;  
+    }
     
 }
   
@@ -382,6 +387,9 @@ footer {
   text-decoration: none;
   color: crimson;
 }
+section {
+  padding: 30px;
+}
 .row {
   position: relative;
   width: 100%;
@@ -392,4 +400,37 @@ footer {
 .row .col50 {
   position: relative;
   width: 48%;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+
+}
+.wrapper> * {
+  padding: 10px;
+  margin: 10px;
+  flex: 1 100%;
+}
+.main {
+  text-align: center;
+}
+
+@media all and (min-width:800px) {
+  .main {
+    flex: 2;
+  }
+  .aside1{
+    order:1;
+  }
+
+  .main{
+    order: 1;
+  }
+}
+@media all and (min-width:600px) {
+  .aside{
+    flex: 1;
+  }
 }
