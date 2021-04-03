@@ -217,6 +217,9 @@ p.home-content-p  {
     .header .menu-icon {
       display: none;
     }
+    .menu-img {
+      padding-left: 15%;
+    }
   }
   
                                   /*   ABOUT SECTION */
@@ -250,6 +253,9 @@ p.home-content-p  {
    .aside{
      flex: 1;
        }
+       .menu-img {
+        padding-left: 15%;
+      }
  }
 
  h3 {
@@ -375,9 +381,10 @@ img {
   height: auto;
   padding-top: 17px;
   position: relative;
+
 }
 .menu-img {
-  padding-left: 30%;
+  padding-right: 15%;
 }
                             /* FOOTER */
 .row {
