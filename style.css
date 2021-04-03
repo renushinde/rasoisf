@@ -83,15 +83,6 @@ p.home-content-p  {
         font-size: 1rem;
         
     }
-    .about section {
-      background-color: crimson;
-    }
-    .row {
-      background-color: crimson;
-      padding: 20px;
-      flex-direction: column;  
-    }
-    
 }
   
                                         /* HEADER NAV BAR */
@@ -226,25 +217,39 @@ p.home-content-p  {
     .header .menu-icon {
       display: none;
     }
-    .info {
-      
-      grid-template-columns: repeat(1,1fr);
-      
-      
-     }
   }
   
                                   /*   ABOUT SECTION */
- 
- .info {
-  padding-left: 17px;
-  padding-right: 17px;
-  margin: 40px;
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 40px;
-  text-align: center;
-  
+  .about {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+  }
+  .about> * {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+  }
+ .main {
+    text-align: center;
+  }
+                                  
+  @media all and (min-width:800px) {
+    .main {
+     flex: 2;
+     }
+   .aside1{
+     order:1;
+  }
+                                  
+    .main{
+      order: 1;
+     }
+ }
+ @media all and (min-width:600px) {
+   .aside{
+     flex: 1;
+       }
  }
 
  h3 {
@@ -254,9 +259,7 @@ p.home-content-p  {
    line-height: 1.5rem;
    letter-spacing: 1px;
    font-weight: 600;
- }
-
- 
+ }  
   p {
     
     justify-content: center;
@@ -284,17 +287,20 @@ p.home-content-p  {
                                    /*   DISHES and MENU  */
 
 #menu {
-  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 /* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
+ .slideshow-container {
   position: relative;
   margin: auto;
-}
+} 
 
 /* Hide the images by default */
 .mySlides {
+  width: 100%;
   display: none;
 }
 
@@ -337,8 +343,7 @@ p.home-content-p  {
   transition: background-color 0.6s ease;
 }
 img {
-  width: 782.843px;
-  height: 522px;
+  width:100%
 }
 
 .active, .dot:hover {
@@ -361,7 +366,9 @@ img {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
+} 
+
+                /* MENU IMAGE */
 
 .image-square {
   width: 100%;
@@ -371,6 +378,22 @@ img {
 }
 .menu-img {
   padding-left: 30%;
+}
+                            /* FOOTER */
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.row> * {
+  padding: 10px;
+  margin: 10px;
+}
+
+.row .col-50{
+  width: 48%;
 }
 
 footer {
@@ -389,48 +412,4 @@ footer {
 }
 section {
   padding: 30px;
-}
-.row {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.row .col50 {
-  position: relative;
-  width: 48%;
-}
-
-.wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-
-}
-.wrapper> * {
-  padding: 10px;
-  margin: 10px;
-  flex: 1 100%;
-}
-.main {
-  text-align: center;
-}
-
-@media all and (min-width:800px) {
-  .main {
-    flex: 2;
-  }
-  .aside1{
-    order:1;
-  }
-
-  .main{
-    order: 1;
-  }
-}
-@media all and (min-width:600px) {
-  .aside{
-    flex: 1;
-  }
 }
