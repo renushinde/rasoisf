@@ -71,7 +71,7 @@ p.home-content-p  {
         font-size: 1.5rem;
     }
     .home-content{
-        display: none;
+        display: block;
     }
     .header {
         max-width: 100vh;
