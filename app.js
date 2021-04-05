@@ -66,6 +66,4 @@ function changeSlide(){
     slides[index].style.display = "block";
     dots[index].classList.add("active");
 
-  
-
 }
