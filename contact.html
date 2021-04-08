@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="contact.css">
-    <title>contactRanu</title>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <title>catering</title>
 </head>
 <body>
     <header class="header">
@@ -33,6 +35,7 @@
             </div>
             <div class="contact">
                 <h3>Email Us</h3>
+                <div class="alert">Your message has been sent!</div>
                 <form action="" id="contactForm">
                     <p>
                         <label>First Name</label>
@@ -44,11 +47,11 @@
                     </p>
                     <p>
                         <label>Email</label>
-                        <input type="text" name="email" id="email">
+                        <input type="email" name="email" id="email" required>
                     </p>
                     <p>
                         <label># of Diners </label>
-                        <input type="text" name="phone" id="phone"required>
+                        <input type="number" name="phone" id="phone"required>
                     </p>
                     <p class="full">
                         <label>Message</label>
@@ -61,6 +64,7 @@
             </div>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

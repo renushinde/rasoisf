@@ -92,3 +92,11 @@ ul{
         text-align: left;
     }
 }
+
+.alert{
+    text-align: center;
+    padding: 10px;
+    color:crimson;
+    margin-bottom: 10px;
+    display: none;
+}
