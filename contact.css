@@ -150,7 +150,7 @@ body{
         font-size: 1.5rem;
     }
     .home-content{
-        display: block;
+        margin-top:130px;
     }
     .header {
         max-width: 100vh;
